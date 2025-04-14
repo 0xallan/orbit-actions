@@ -14,22 +14,22 @@ Note that contracts without code changes are not upgraded. It is normal to have 
 ## Requirements
 
 **Nitro contracts**: This upgrade only supports upgrading from the following [nitro-contract release](https://github.com/OffchainLabs/nitro-contracts/releases):
-  - Inbox: v1.1.0 - v2.1.3 inclusive
-  - Outbox: any
-  - SequencerInbox: v1.2.1 - v2.1.3 inclusive
-  - Bridge
-    - eth chain: v1.1.0 - v2.1.3 inclusive
-    - custom-fee token chain: v2.0.0 - v2.1.3 inclusive
-  - RollupProxy: v1.1.0 - v2.1.3 inclusive
-  - RollupAdminLogic: v2.0.0 - v2.1.3 inclusive
-  - RollupUserLogic: v2.0.0 - v2.1.3 inclusive
-  - ChallengeManager: v2.0.0 - v2.1.3 inclusive
+- Inbox: v1.1.0 - v2.1.3 inclusive
+- Outbox: any
+- SequencerInbox: v1.2.1 - v2.1.3 inclusive
+- Bridge
+  - eth chain: v1.1.0 - v2.1.3 inclusive
+  - custom-fee token chain: v2.0.0 - v2.1.3 inclusive
+- RollupProxy: v1.1.0 - v2.1.3 inclusive
+- RollupAdminLogic: v2.0.0 - v2.1.3 inclusive
+- RollupUserLogic: v2.0.0 - v2.1.3 inclusive
+- ChallengeManager: v2.0.0 - v2.1.3 inclusive
 
-Please refer to the top [README](../../README.md) `Check Version and Upgrade Path` on how to determine your current nitro contracts version.
+  Please refer to the top [README](../../README.md) `Check Version and Upgrade Path` on how to determine your current nitro contracts version.
 
 **Nitro node**: This upgrade also requires a minimum node verion of Nitro v3.5.4 or higher. Most of the parameters used in Nitro before v3.5.4 will stay the same when running a higher version but, depending on the type of node, you'll have to include a few more BoLD-specific parameters:
-  - For validator nodes: add `--node.bold.enable=true` and `--node.bold.strategy=<MakeNodes | ResolveNodes | Defensive>` to configure the validator to create and/or confirm assertions in the new Rollup contract (find more information in [How to run a validator](/run-arbitrum-node/more-types/02-run-validator-node.mdx#step-1-configure-and-run-your-validator))
-  - For all other types of node: add `--node.bold.enable=true` to enable [watchtower mode](/run-arbitrum-node/03-run-full-node.mdx#watchtower-mode)
+- For validator nodes: add `--node.bold.enable=true` and `--node.bold.strategy=<MakeNodes | ResolveNodes | Defensive>` to configure the validator to create and/or confirm assertions in the new Rollup contract (find more information in [How to run a validator](/run-arbitrum-node/more-types/02-run-validator-node.mdx#step-1-configure-and-run-your-validator))
+- For all other types of node: add `--node.bold.enable=true` to enable [watchtower mode](/run-arbitrum-node/03-run-full-node.mdx#watchtower-mode)
 
 ## How to use it
 
